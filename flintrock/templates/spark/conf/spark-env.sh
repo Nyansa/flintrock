@@ -14,7 +14,7 @@ export HADOOP_CONF_DIR="$HOME/hadoop/conf"
 
 # TODO: Make this non-EC2-specific.
 # Bind Spark's web UIs to this machine's public EC2 hostname
-export SPARK_PUBLIC_DNS="$(curl --silent http://169.254.169.254/latest/meta-data/public-hostname)"
+export SPARK_PUBLIC_DNS="$(curl --silent http://169.254.169.254/latest/meta-data/local-ipv4)"
 
 # TODO: Set a high ulimit for large shuffles
 # Need to find a way to do this, since "sudo ulimit..." doesn't fly.
